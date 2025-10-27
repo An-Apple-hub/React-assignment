@@ -6,15 +6,7 @@ import { Laptop, Rocket, Smartphone, Target  } from "lucide-react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { 
-  faPalette, 
-  faCode, 
-  faGlobe, 
-  faMobileAlt, 
-  faServer, 
-  faLightbulb, 
-  faBriefcase, 
-  faCloud, 
-  faLock 
+  faPalette, faCode, faGlobe, faMobileAlt, faServer, faLightbulb, faBriefcase, faCloud, faLock 
 } from "@fortawesome/free-solid-svg-icons";
 
 
@@ -135,15 +127,15 @@ const values = [
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 1 }}
-          className="max-w-2xl text-[#3F2C1D]/80 text-lg leading-relaxed"
+          className="max-w-2xl text-[#3F2C1D]/80 text-lg leading-relaxed flex justify-center gap-8 px-4 py-2"
         >
-100% Client Satisfaction.               
-Secure & Scalable
-24/7 Support
+<span>100% Client Satisfaction.</span>
+  <span>Secure & Scalable</span>
+  <span>24/7 Support</span>
         </motion.p>
       </section>
 
-    {/* Stats Cards */}
+
 <section className="flex flex-wrap justify-center gap-8 px-6 pb-20">
   {[
     {
@@ -169,7 +161,7 @@ Secure & Scalable
       transition={{ type: "spring", stiffness: 120, damping: 10, delay: i * 0.1 }}
       whileHover={{
         scale: 1.1,
-        rotate: 2, // small rotation on hover
+        rotate: 2, 
         y: -5,
         boxShadow: "0px 15px 30px rgba(0,0,0,0.2)",
         backgroundColor: "rgba(255,255,255,0.9)",
@@ -183,9 +175,9 @@ Secure & Scalable
     </motion.div>
   ))}
   </section>
-{/* Creative Services Section */}
+
 <section className="px-6 py-20 bg-gradient-to-b from-[#fdfaf6] to-[#fff8f2]">
-  {/* Stats */}
+
   <div className="flex flex-wrap justify-center gap-8 mb-16">
     {[ 
       { icon: <Laptop className="w-20 h-20 text-[#448072]" />, label: "Web Projects", value: "10+" },
@@ -213,7 +205,7 @@ Secure & Scalable
 <section className="px-6 py-20 bg-gradient-to-b from-[#fdfaf6] to-[#fff8f2]">
 
 
-  {/* About Section */}
+  {/* About Section  it is*/}
   <div className="max-w-4xl mx-auto text-center mb-16">
    
     
@@ -240,7 +232,7 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
        
   </div>
 
-{/* Services Grid */}
+{/* Services Gri */}
 <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
   {[
     { title: "UI/UX Design", desc: "Creating intuitive and modern interfaces that delight users.", icon: faPalette },
@@ -274,7 +266,7 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
 </div>
     
 
-        {/* Services Section */}
+  {/* Services Sectionn */}
         <section id="services" className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto m-10">
           {services.map((service, index) => (
             <motion.div
@@ -291,7 +283,7 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
               <ul className="space-y-1">
                 {service.features.map((feature, i) => (
                   <li key={i} className="flex items-center text-gray-600 text-sm">
-                    <span className="w-4 h-4 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+                    <span className="w-4 h-4 bg-[#448072] rounded-full mr-2 animate-pulse"></span>
                     {feature}
                   </li>
                 ))}
@@ -303,7 +295,7 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
 <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4 sm:p-6">
   <div className="w-full max-w-5xl bg-white rounded-3xl shadow-xl p-6 sm:p-10">
     <h2 className="text-4xl font-bold mb-10 text-gray-800 text-center flex items-center justify-center gap-2">
-      🌟 Why Choose <span className="text-blue-600">AppDost?</span>
+      🌟 Why Choose <span className="text-[#5a3e29]">AppDost?</span>
     </h2>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -361,7 +353,7 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
         </p>
 
         <div className="space-y-10">
-          {/* Step 1 */}
+     
           <div className="relative bg-white text-gray-800 rounded-2xl shadow-xl p-8 max-w-3xl mx-auto hover:shadow-2xl transition-shadow">
             <div className="absolute -left-6 top-8 bg-orange-500 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold shadow-md">
               1
@@ -374,7 +366,7 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
             </p>
           </div>
 
-          {/* Step 2 */}
+       
           <div className="relative bg-white text-gray-800 rounded-2xl shadow-xl p-8 max-w-3xl mx-auto hover:shadow-2xl transition-shadow">
             <div className="absolute -left-6 top-8 bg-orange-500 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold shadow-md">
               2
@@ -387,7 +379,6 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
             </p>
           </div>
 
-          {/* Step 3 */}
           <div className="relative bg-white text-gray-800 rounded-2xl shadow-xl p-8 max-w-3xl mx-auto hover:shadow-2xl transition-shadow">
             <div className="absolute -left-6 top-8 bg-orange-500 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold shadow-md">
               3
@@ -400,7 +391,6 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
             </p>
           </div>
 
-          {/* Step 4 */}
           <div className="relative bg-white text-gray-800 rounded-2xl shadow-xl p-8 max-w-3xl mx-auto hover:shadow-2xl transition-shadow">
             <div className="absolute -left-6 top-8 bg-orange-500 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold shadow-md">
               4
@@ -417,17 +407,16 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
     </section>
 
   <section className="bg-[#ffffff] py-20 flex justify-center items-center">
-  {/* Card Container */}
+ 
   <div className="relative w-[92%] md:w-[85%] lg:w-[75%] bg-[#ffffff] rounded-[3rem] shadow-2xl overflow-hidden border border-[#2d2721]">
-    {/* Textured Background */}
     <div
       className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/dark-mosaic.png')] bg-center bg-cover opacity-10"
       aria-hidden="true"
     ></div>
 
-    {/* Card Content */}
+ 
     <div className="relative max-w-6xl mx-auto px-6 md:px-10 py-16 text-center">
-      {/* Section Header */}
+  
       <div className="mb-14">
         <h2 className="text-4xl font-bold mb-3 text-[#FCB57E]">Our Featured Projects</h2>
         <p className="text-gray-300 text-lg mb-12">
@@ -435,9 +424,8 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
         </p>
       </div>
 
-      {/* Featured Projects */}
       <div className="grid md:grid-cols-3 gap-8 mb-16">
-        {/* Card 1 */}
+      
         <div className="bg-[#2a2520] border-t-4 border-[#FCB57E] rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition-transform duration-300">
           <h3 className="text-2xl font-semibold mb-1 text-[#FCB57E]">
             AI-Powered Educational Platform
@@ -456,7 +444,6 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
           </div>
         </div>
 
-        {/* Card 2 */}
         <div className="bg-[#2a2520] border-t-4 border-[#448072] rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition-transform duration-300">
           <h3 className="text-2xl font-semibold mb-1 text-[#448072]">
             Educational Platform
@@ -474,7 +461,7 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
           </a>
         </div>
 
-        {/* Card 3 */}
+        
         <div className="bg-[#2a2520] border-t-4 border-[#3F2C1D] rounded-2xl p-6 shadow-lg hover:-translate-y-2 transition-transform duration-300">
           <h3 className="text-2xl font-semibold mb-1 text-[#8f745f]">
             Wedding Planning Portal
@@ -493,17 +480,16 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
         </div>
       </div>
 
-      {/* Button */}
+     
       <div className="text-center mb-20">
         <a
-          href="#"
+          href="./portfolio"
           className="inline-block bg-[#FCB57E] text-[#1f1b16] font-semibold px-6 py-3 rounded-full hover:bg-[#ffd1a6] transition"
         >
           View All Projects →
         </a>
       </div>
 
-      {/* Open Source Header */}
       <div className="text-center mb-12">
         <h3 className="text-3xl font-bold mb-2 text-[#FCB57E]">
           Open Source & Innovation Projects
@@ -513,9 +499,8 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
         </p>
       </div>
 
-      {/* Open Source Grid */}
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {/* Card 1 */}
+      
         <div className="bg-[#2b2927] border-l-4 border-[#FCB57E] p-6 rounded-xl shadow-md hover:bg-[#2f2b27] transition">
           <div className="text-4xl mb-3">🤖</div>
           <h4 className="text-xl font-semibold mb-1 text-[#FCB57E]">DeepFake Detection</h4>
@@ -524,12 +509,12 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
             Advanced deep learning model for detecting manipulated media using computer
             vision and neural networks.
           </p>
-          <a href="#" className="text-[#fddfbd] hover:underline font-medium">
+          <a href="https://github.com" className="text-[#fddfbd] hover:underline font-medium">
             View on GitHub →
           </a>
         </div>
 
-        {/* Card 2 */}
+       
         <div className="bg-[#2b2927] border-l-4 border-[#448072] p-6 rounded-xl shadow-md hover:bg-[#2f2b27] transition">
           <div className="text-4xl mb-3">🐍</div>
           <h4 className="text-xl font-semibold mb-1 text-[#448072]">NooBot</h4>
@@ -538,12 +523,12 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
             Smart automation bot built with Python for task scheduling, data processing,
             and intelligent workflow automation.
           </p>
-          <a href="#" className="text-[#fddfbd] hover:underline font-medium">
+          <a href="https://github.com" className="text-[#fddfbd] hover:underline font-medium">
             View on GitHub →
           </a>
         </div>
 
-        {/* Card 3 */}
+     
         <div className="bg-[#2b2927] border-l-4 border-[#3F2C1D] p-6 rounded-xl shadow-md hover:bg-[#2f2b27] transition">
           <div className="text-4xl mb-3">📚</div>
           <h4 className="text-xl font-semibold mb-1 text-[#8f745f]">EduTools</h4>
@@ -552,12 +537,11 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
             Collection of educational tools and utilities for students and teachers.
             Interactive learning resources and study aids.
           </p>
-          <a href="#" className="text-[#fddfbd] hover:underline font-medium">
+          <a href="https://github.com" className="text-[#fddfbd] hover:underline font-medium">
             View on GitHub →
           </a>
         </div>
 
-        {/* Card 4 */}
         <div className="bg-[#2b2927] border-l-4 border-[#FCB57E] p-6 rounded-xl shadow-md hover:bg-[#2f2b27] transition">
           <div className="text-4xl mb-3">💬</div>
           <h4 className="text-xl font-semibold mb-1 text-[#FCB57E]">DialogFlow Chatbot</h4>
@@ -566,7 +550,7 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
             Intelligent chatbot using Google's DialogFlow ES for natural language
             processing and automated customer support.
           </p>
-          <a href="#" className="text-[#fddfbd] hover:underline font-medium">
+          <a href="https://github.com" className="text-[#fddfbd] hover:underline font-medium">
             View on GitHub →
           </a>
         </div>
@@ -577,7 +561,8 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
 
 
  <div className="min-h-screen bg-gray-50 p-2 flex flex-col md:flex-row  justify-center items-center gap-40">
-      {/* Work Culture Section */}
+    
+  {/* Work Culture wala Section */}
       <div className="flex-1 bg-white rounded-2xl shadow-lg p-8">
         <h2 className="text-3xl font-bold mb-6 flex items-center gap-2">💼 Work Culture & Values</h2>
         <p className="text-gray-600 mb-6">At AppDost, we believe in:</p>
@@ -635,7 +620,7 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
     </div>
 
  <div className="bg-gray-50 text-gray-800">
-      {/* --- TECHNOLOGIES SECTION --- */}
+  
       <section className="flex flex-col items-center justify-center text-center px-3 sm:px-6 lg:px-10 py-3 sm:py-14 lg:py-20">
         <motion.h2
           className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4"
@@ -664,7 +649,7 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
             visible: { transition: { staggerChildren: 0.1 } },
           }}
         >
-          {/* Each tech card */}
+    
           {[
             { icon: "⚛️", name: "React" },
             { icon: "🟢", name: "Node.js" },
@@ -690,7 +675,7 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
         </motion.div>
       </section>
 
-      {/* --- LATEST UPDATES SECTION --- */}
+    
       <section className="bg-white py-14 sm:py-20 px-3 sm:px-6 lg:px-10 flex flex-col items-center">
         <motion.h2
           className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 text-center"
@@ -742,7 +727,6 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
         </motion.button>
       </section>
 
-      {/* --- CTA SECTION --- */}
       <section className="bg-[#448072] text-white py-14 sm:py-20 px-3 sm:px-6 lg:px-10 text-center flex flex-col items-center justify-center">
         <motion.h2
           className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4"
@@ -765,11 +749,18 @@ market-ready products. Our mission is to empower businesses with cutting-edge te
 
         <motion.div
           whileHover={{ scale: 1.05 }}
-          className="flex flex-wrap justify-center gap-4"
+          className="flex flex-wrap justify-center gap-4 py-6"
         >
           <button className="bg-white text-[#448072] font-semibold px-6 py-3 rounded-xl shadow hover:shadow-md transition">
             Get Free Consultation →
           </button>
+         
+        </motion.div>
+          <motion.div
+          whileHover={{ scale: 1.05 }}
+          className="flex flex-wrap justify-center gap-4"
+        >
+         
           <button className="border border-white text-white px-6 py-3 rounded-xl hover:bg-white/10 transition">
             View Our Services
           </button>

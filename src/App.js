@@ -6,18 +6,21 @@ import Portfolio from "./Portfolio";
 import Teams from "./Teams";
 import Contact from "./Contact";
 import logo from './logo.png';
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn, faInstagram, faFacebookF } from "@fortawesome/free-brands-svg-icons";
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     
    <>
-        {/* Header */}
+        {/* Headerr */}
         <header className="flex items-center justify-between px-10 py-6 bg-white/20 backdrop-blur-md shadow-md">
           <div className="flex items-center space-x-2">
             <img src={logo} alt="AppDost" className="w-30 h-12 border-2 border-[#7A441B]" />
-            <h1 className="text-2xl font-bold text-[#3F2C1D]">AppDost</h1>
           </div>
 
           <nav className="space-x-8 hidden md:flex text-[#3F2C1D] font-medium">
@@ -30,10 +33,45 @@ function App() {
             <Link to="/contact" className="hover:text-[#FCB57E] transition">Contact</Link>
           </nav>
 
-          <div className="md:hidden text-[#3F2C1D] font-semibold">☰</div>
-        </header>
+ <div
+        className="md:hidden text-[#3F2C1D] text-3xl cursor-pointer"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        ☰
+      </div>
 
-        {/* Routes */}
+      {/* Mobile Menu (Dropdown) */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
+            className="absolute top-full left-0 w-full bg-white/95 backdrop-blur-md shadow-md flex flex-col items-center space-y-4 py-4 md:hidden z-50"
+          >
+            {[
+              { path: "/", label: "Home" },
+              { path: "/about", label: "About" },
+              { path: "/services", label: "Services" },
+              { path: "/portfolio", label: "Portfolio" },
+              { path: "/teams", label: "Teams" },
+              { path: "/contact", label: "Contact" },
+            ].map(({ path, label }) => (
+              <Link
+                key={path}
+                to={path}
+                className="text-[#3F2C1D] font-medium hover:text-[#FCB57E] transition"
+                onClick={() => setMenuOpen(false)} // close menu on click
+              >
+                {label}
+              </Link>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>        </header>
+
+        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -44,10 +82,10 @@ function App() {
         </Routes>
 
         {/* Footer */}
-     <footer className="bg-[#3F2C1D] text-white px-8 md:px-20 py-16">
+     <footer className="bg-[#3e2a1b] text-white px-8 md:px-20 py-16">
   <div className="grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-[#7A441B]/40 pb-12">
 
-    {/* Brand Info */}
+    
     <div>
       <div className="flex items-center space-x-3 mb-4">
         <img
@@ -55,14 +93,13 @@ function App() {
           alt="AppDost"
           className="w-30 h-12  border-2 border-[#FCB57E]"
         />
-        <h2 className="text-2xl font-bold text-[#FCB57E]">AppDost</h2>
       </div>
       <p className="text-[#FCB57E]/80 leading-relaxed mb-6">
         Delivering innovative IT solutions since 2025. We transform ideas into
         powerful digital experiences with cutting-edge technology and expert craftsmanship.
       </p>
 
-      {/* Stats */}
+    
       <div className="flex space-x-8 mb-6">
         <div>
           <h3 className="text-2xl font-bold text-[#FCB57E]">10+</h3>
@@ -78,7 +115,7 @@ function App() {
         </div>
       </div>
 
-      {/* Social Links */}
+  
       <div className="flex space-x-4">
         <a href="https://linkedin.com/company/appdost" target="_blank" rel="noopener noreferrer"
    className="p-2 bg-[#7A441B]/40 rounded-full hover:bg-[#FCB57E]/30 transition">
@@ -103,7 +140,7 @@ function App() {
       </div>
     </div>
 
-    {/* Quick Links */}
+ 
     <div>
       <h3 className="text-lg font-semibold mb-4 text-[#FCB57E] border-b border-[#FCB57E]/30 pb-2">
         Quick Links
@@ -111,7 +148,7 @@ function App() {
       <ul className="space-y-3 text-[#FCB57E]/80">
         {["Home", "Services", "Careers", "Blog", "Contact"].map((link) => (
           <li key={link}>
-            <a href="#" className="hover:text-[#FCB57E] transition">
+            <a href="" className="hover:text-[#FCB57E] transition">
               → {link}
             </a>
           </li>
@@ -119,7 +156,7 @@ function App() {
       </ul>
     </div>
 
-    {/* Our Services */}
+   
     <div>
       <h3 className="text-lg font-semibold mb-4 text-[#FCB57E] border-b border-[#FCB57E]/30 pb-2">
         Our Services
@@ -134,7 +171,7 @@ function App() {
           "Cybersecurity",
         ].map((service) => (
           <li key={service}>
-            <a href="#" className="hover:text-[#FCB57E] transition">
+            <a href="./services" className="hover:text-[#FCB57E] transition">
               → {service}
             </a>
           </li>
@@ -142,7 +179,7 @@ function App() {
       </ul>
     </div>
 
-    {/* Contact Info */}
+    
     <div>
       <h3 className="text-lg font-semibold mb-4 text-[#FCB57E] border-b border-[#FCB57E]/30 pb-2">
         Contact Info
@@ -164,7 +201,7 @@ function App() {
     </div>
   </div>
 
-  {/* Bottom Bar */}
+
   <div className="flex flex-col md:flex-row justify-between items-center text-[#FCB57E]/70 mt-8 text-sm border-t border-[#7A441B]/70 pt-6">
     <p>© 2025 AppDost – Complete IT Solution. All rights reserved.</p>
     <div className="flex flex-wrap items-center space-x-4 mt-3 md:mt-0">

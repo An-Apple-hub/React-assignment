@@ -26,7 +26,7 @@ const About = () => {
         </motion.p>
       </section>
 
-      {/* Mission Section */}
+    
       <section className="py-16 px-6 md:px-16 text-center">
         <motion.h2
           initial={{ opacity: 0 }}
@@ -67,7 +67,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Story Section */}
+    
       <section className="py-16 px-6 md:px-24 bg-white">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2
@@ -88,7 +88,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Impact Section */}
+  
       <section className="py-16 px-6 md:px-16 bg-gradient-to-r from-indigo-100 via-[#448072] to-white-500 text-center">
         <h2 className="text-3xl font-bold mb-12 text-white">Our Impact</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

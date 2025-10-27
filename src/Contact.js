@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Share2, Clock, Building2, Headphones } from "lucid
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#f1d0b6] via-[#a7f5e3] to-[#e0d6ce] text-gray-800">
-      {/* Header Section */}
+
       <section className="text-center py-20 bg-[#448072] text-white rounded-b-[40px] shadow-lg">
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
@@ -19,7 +19,7 @@ export default function ContactPage() {
         </p>
       </section>
 
-      {/* Contact Options */}
+      {/* Contact  */}
       <section className="grid grid-cols-1 md:grid-cols-4 gap-6 px-6 md:px-20 -mt-10 relative z-10">
         {[
           { icon: <Mail />, title: "Email Us", info: "contact@appdost.in" },
@@ -40,9 +40,7 @@ export default function ContactPage() {
         ))}
       </section>
 
-      {/* Form and Office Info */}
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-6 md:px-20 py-16">
-        {/* Contact Form */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -74,7 +72,6 @@ export default function ContactPage() {
           </form>
         </motion.div>
 
-        {/* Office Info */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -102,8 +99,7 @@ export default function ContactPage() {
           </div>
         </motion.div>
       </section>
-      {/* FAQ Section */}
-<section className="py-20 bg-gradient-to-b from-white to-indigo-50">
+<section className="py-20 bg-gradient-to-b from-white to-[#a7e7d8]">
   <div className="max-w-6xl mx-auto px-6 text-center">
     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
       Frequently Asked Questions
@@ -144,7 +140,7 @@ export default function ContactPage() {
           whileHover={{ y: -4 }}
           className="bg-white shadow-md rounded-2xl p-6 text-left hover:shadow-lg transition"
         >
-          <h3 className="font-semibold text-indigo-700 mb-2">{item.q}</h3>
+          <h3 className="font-semibold text-black mb-2">{item.q}</h3>
           <p className="text-gray-600 text-sm leading-relaxed">{item.a}</p>
         </motion.div>
       ))}
@@ -152,8 +148,7 @@ export default function ContactPage() {
   </div>
 </section>
 
-{/* Why Choose AppDost Section */}
-<section className="py-20 bg-gradient-to-b from-indigo-50 to-white">
+<section className="py-20 bg-gradient-to-b from-[#a7e7d8] to-white">
   <div className="max-w-6xl mx-auto px-6 text-center">
     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
       Why Choose AppDost?
@@ -210,7 +205,7 @@ export default function ContactPage() {
   </div>
 </section>
 
-{/* Office Locations Section */}
+
 <section className="py-20 bg-gradient-to-b from-white to-indigo-50">
   <div className="max-w-6xl mx-auto px-6 text-center">
     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -225,35 +220,39 @@ export default function ContactPage() {
         {
           title: "Banka Office",
           type: "HEADQUARTERS",
-          address: "AppDost Computer IT Solutions, Jawahar Lal Nehru Marg, Banka, Bihar 813102, India",
-          color: "from-blue-500 to-indigo-600",
+          address:
+            "AppDost Computer IT Solutions, Jawahar Lal Nehru Marg, Banka, Bihar 813102, India",
         },
         {
           title: "Motihari Office",
           type: "BRANCH",
-          address: "AppDost Computer IT Solutions, Janpul Chowk, Kesariya, Motihari, Bihar 845426, India",
-          color: "from-green-500 to-emerald-600",
+          address:
+            "AppDost Computer IT Solutions, Janpul Chowk, Kesariya, Motihari, Bihar 845426, India",
         },
         {
           title: "Patna Office",
           type: "BRANCH",
-          address: "AppDost Solution Computer IT Solutions, Mithapur, Station Road, Patna, Bihar 800001, India",
-          color: "from-pink-500 to-purple-600",
+          address:
+            "AppDost Solution Computer IT Solutions, Mithapur, Station Road, Patna, Bihar 800001, India",
         },
       ].map((office, i) => (
         <motion.div
           key={i}
-          whileHover={{ y: -5, scale: 1.05 }}
+          whileHover={{ y: -5, scale: 1.03 }}
           transition={{ type: "spring", stiffness: 150 }}
-          className={`bg-white rounded-2xl shadow-md hover:shadow-xl p-6 border-t-4 bg-gradient-to-b ${office.color}`}
+          className="bg-white rounded-2xl shadow-md hover:shadow-xl p-6 border border-gray-200"
         >
           <div className="text-left">
-            <p className="text-xs font-semibold text-[#b0dbd1] mb-1">{office.type}</p>
-            <h3 className="text-xl font-bold text-white mb-2">{office.title}</h3>
-            <p className="text-[#bae3da] text-sm mb-3">{office.address}</p>
+            <p className="text-xs font-semibold text-indigo-600 mb-1">
+              {office.type}
+            </p>
+            <h3 className="text-xl font-bold text-gray-900 mb-2">
+              {office.title}
+            </h3>
+            <p className="text-gray-600 text-sm mb-3">{office.address}</p>
             <a
               href="#"
-              className="text-white font-medium hover:underline"
+              className="text-indigo-600 font-medium hover:underline"
             >
               View on Map →
             </a>
@@ -263,6 +262,7 @@ export default function ContactPage() {
     </div>
   </div>
 </section>
+
 
     </div>
   );

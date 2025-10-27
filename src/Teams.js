@@ -5,7 +5,7 @@ export default function TeamPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-[#f7decb] to-white text-[#3F2C1D]">
       
-      {/* HERO SECTION */}
+   
       <section className="relative py-28 text-center overflow-hidden">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -33,7 +33,6 @@ export default function TeamPage() {
         </div>
       </section>
 
-      {/* WHY WORK WITH US */}
       <section className="py-20 px-6 md:px-16 relative">
         <div className="max-w-6xl mx-auto">
           <motion.h2
@@ -102,7 +101,7 @@ export default function TeamPage() {
         </div>
       </section>
 
-      {/* CURRENT OPENINGS */}
+      {/* CURRENT OPENIN */}
       <section className="py-20 text-center bg-white">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
@@ -137,7 +136,6 @@ export default function TeamPage() {
         </motion.div>
       </section>
 
-      {/* SUBMIT YOUR RESUME */}
       <section className="py-24 px-6 md:px-16 relative">
         <div className="max-w-3xl mx-auto bg-transparent border border-slate-700 p-10 rounded-2xl shadow-xl backdrop-blur-sm">
           <motion.h2
