@@ -48,8 +48,21 @@ export default function PortfolioShowcase() {
       : projectsData.filter((p) => p.category === selected);
 
   return (
-    <div className="px-6 md:px-20 py-16 bg-gradient-to-br from-[#fef9f5] via-[#aad9dc] to-white min-h-screen">
-      {/* Filter Buttons */}
+    <div>
+ 
+ <section className="text-center py-20  mb-12 bg-[#448072] text-white rounded-b-[40px] shadow-lg">
+        <motion.h1
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-extrabold mb-3"
+        >Portfolio
+        </motion.h1>
+        
+      </section>
+
+
+
       <div className="flex flex-wrap justify-center gap-4 mb-12">
         {filters.map((filter) => (
           <button

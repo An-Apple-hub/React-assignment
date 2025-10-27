@@ -92,7 +92,7 @@ return (
               <ul className="space-y-1">
                 {service.features.map((feature, i) => (
                   <li key={i} className="flex items-center text-gray-600 text-sm">
-                    <span className="w-4 h-4 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+                    <span className="w-4 h-4 bg-[#448072] rounded-full mr-2 animate-pulse"></span>
                     {feature}
                   </li>
                 ))}

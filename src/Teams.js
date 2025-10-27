@@ -11,7 +11,7 @@ export default function TeamPage() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="absolute inset-0 bg-gradient-to-r from-white via-[#FCB57E] to-white opacity-20 blur-3xl"
+          className="absolute inset-0  opacity-20 blur-3xl"
         />
         <div className="relative z-10">
           <motion.h1
@@ -81,7 +81,7 @@ export default function TeamPage() {
                 key={i}
                 whileHover={{ scale: 1.05, rotate: 1 }}
                 transition={{ type: "spring", stiffness: 200 }}
-                className="group relative bg-gradient-to-br from- to-slate-900 rounded-2xl p-6 shadow-xl border border-slate-700 overflow-hidden"
+                className="group relative bg-white rounded-2xl p-6 shadow-xl border border-slate-700 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-[#afe1d6] to-[#efd0b9] opacity-0 group-hover:opacity-100 transition duration-500"></div>
                 <div className="relative z-10 flex flex-col items-center text-center">
